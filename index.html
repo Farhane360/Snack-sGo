@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack'Go</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Snack'Go</a>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#snack">Nos Snack</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#snack">Nos Snack</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <section class="hero" id="home">
+        <img src="img/cookies.png" class="fade-down" alt="">
+        <div class="hero-description">
+            <h1 class="fade-down">Le snack parfait pour une <span style="color: #99582a;">pause saine !</span></h1>
+            <p class="fade-down">Des chips et biscuits croquants, sans compromis sur la qualité.</p>
+            <button class="btn-cta fade-down" onclick="window.location.href='#snack'">Commander !</button>
+        </div>
+    </section>
+
+    <section class="whyus">
+        <h2>Pourquoi nous choisir ?</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/nature.png" alt="">
+                <h3>Ingrédients naturels</h3>
+            </div>
+            <div class="card">
+                <img src="img/muscle.png" alt="">
+                <h3>Riche en fibres et protéines</h3>
+            </div>
+            <div class="card">
+                <img src="img/cookie.png" alt="">
+                <h3>Croustillant & Savoureux</h3>
+            </div>
+            <div class="card">
+                <img src="img/delivery-bike.png" alt="">
+                <h3>Livraison rapide</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-sellers" id="snack">
+        <h2>Nos Meilleures Ventes</h2>
+        <div class="products">
+            <div class="product fade-down">
+                <img src="img/chocolat-noir.png" alt="">
+                <h3>Chocolat Noir</h3>
+                <span>€2.50</span>
+                <button class="order-now">Commander</button>
+            </div>
+            <div class="product fade-down">
+                <img src="img/noisette.png" alt="">
+                <h3>Noisette</h3>
+                <span>€1.50</span>
+                <button class="order-now">Commander</button>
+            </div>
+            <div class="product fade-down">
+                <img src="img/pot-de-miel.png" alt="">
+                <h3>Miel</h3>
+                <span>€5.20</span>
+                <button class="order-now">Commander</button>
+            </div>
+            <div class="product fade-down">
+                <img src="img/fruits-secs.png" alt="">
+                <h3>Fruit sec</h3>
+                <span>€3.50</span>
+                <button class="order-now">Commander</button>
+            </div>
+        </div>
+    </section>
+    <div class="popup-overlay"></div>
+    <div class="popup">
+        <span class="close-popup">&times;</span>
+        <img id="popup-img" src="" alt="">
+        <h3 id="popup-title"></h3>
+        <span id="popup-price"></span>
+        <button class="btn-cta">Confirmer la commande</button>
+    </div>
+
+
+    <section class="reviews">
+        <h2>Ce que disent nos clients</h2>
+        <div class="clients-reviews">
+            <div class="reviews-details slide-in">
+                <img src="img/young-man.png" alt="">
+                <h3>Marc L.</h3>
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>"Une véritable découverte ! Les chocolats sont exquis, 
+                    et le mélange de noisettes avec le miel est tout 
+                    simplement irrésistible. J'ai également essayé les 
+                    fruits secs, qui sont d'une qualité exceptionnelle. 
+                    Je recommande vivement cette boutique à tous les 
+                    amateurs de douceurs !"
+                </p>
+            </div>
+            <div class="reviews-details slide-in">
+                <img src="img/woman.png" alt="">
+                <h3>Sophie T.</h3>
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                </div>
+                <p>"J'ai acheté des chocolats pour un cadeau, et ils ont 
+                    été très appréciés ! La boutique a une belle sélection 
+                    de produits, et le personnel est très accueillant. 
+                    Les noisettes enrobées de chocolat sont un vrai délice. 
+                    J'y retournerai sans hésiter !"
+                </p>
+            </div>
+            <div class="reviews-details slide-in">
+                <img src="img/man.png" alt="">
+                <h3>Jean-Baptiste C.</h3>
+                <div class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                </div>
+                <p>"Un endroit parfait pour se faire plaisir ou pour offrir. 
+                    Le miel est d'une qualité incroyable, et les fruits secs 
+                    sont frais et savoureux. J'adore leur assortiment de 
+                    chocolats, chaque bouchée est un régal. Je suis devenue 
+                    une cliente fidèle !"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a class="last-logo" href="#">Snack'Go</a>
+        <div class="links">
+            <a href="#home">Accueil</a>
+            <a href="#snack">Nos Snack</a>
+        </div>
+        <div class="social-network">
+            <a href="#"><i class='bx bxl-facebook' ></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <p class="mess">"Mangez bien, vivez mieux !"</p>
+        <p class="copy"> © Snack'Go 2025 | Tous les droits sont réservés</p>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
